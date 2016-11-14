@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create an app with Dispersive and React</title>
+  <link rel="stylesheet" type="text/css" href="./styles.css">
+  <script type="text/javascript" src="./bower_components/microlight/microlight.js"></script>
+</head>
+<body>
+  <div id="content">
+
+
+    <h2>3. Show the store elements with the component</h2>
+
+    <div class="microlight">
+    const React = require('react');
+    const Todo = require('./store/Todo');
+
+    class App extends React.Component {
+
+      constructor(...args) {
+        super(...args);
+        this.state = {
+          todos: store.todos.all(),
+        };
+      }
+
+      render() {
+        return (
+          &lt;div&gt;
+            &lt;ul&gt;
+            {this.state.todos.map(
+              todo => &lt;li key={todo.id}&gt;{todo.text}&lt;/li&gt;
+            )}
+            &lt;/ul&gt;
+          &lt;/div&gt;
+        );
+      }
+    }
+
+    module.exports = App;
+    </div>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>Suspendisse euismod congue venenatis. Quisque nisl arcu, ultrices vel fermentum mollis, luctus vitae nibh.</p>
+
+    <div class="microlight">
+    const {Component} = require('dispersive-react');
+    const store = require('./store');
+
+    const state = {
+      todos: store.todos.all(),
+    };
+
+    class App extends Component.using({state}) {
+
+      render() {
+        return (
+          &lt;div&gt;
+            &lt;ul&gt;
+            {this.state.todos.map(
+              todo => &lt;li key={todo.id}&gt;{todo.text}&lt;/li&gt;
+            )}
+            &lt;/ul&gt;
+          &lt;/div&gt;
+        );
+      }
+    }
+
+    module.exports = App;
+    </div>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>Suspendisse euismod congue venenatis. Quisque nisl arcu, ultrices vel fermentum mollis, luctus vitae nibh.</p>
+
+    <div class="microlight">
+    > _store.todos.create({text: 'watch Hook again'})
+    </div>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>Suspendisse euismod congue venenatis. Quisque nisl arcu, ultrices vel fermentum mollis, luctus vitae nibh.</p>
+
+    <h2>4. Create an action to manipulate the store</h2>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>Suspendisse euismod congue venenatis. Quisque nisl arcu, ultrices vel fermentum mollis, luctus vitae nibh.</p>
+
+    <div class="microlight">
+    const {actions} = require('dispersive');
+
+    const addTodo = text => ({text});
+
+    actions.register({addTodo});
+
+    module.exports = actions;
+    </div>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>Suspendisse euismod congue venenatis. Quisque nisl arcu, ultrices vel fermentum mollis, luctus vitae nibh.</p>
+
+    <div class="microlight">
+    const actions = require('./actions');
+    const {store} = require('dispersive');
+    </div>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>Suspendisse euismod congue venenatis. Quisque nisl arcu, ultrices vel fermentum mollis, luctus vitae nibh.</p>
+
+    <div class="microlight">
+    actions.addTodo.subscribe(todo => store.todos.create(todo));
+
+    module.exports = store;
+    </div>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>Suspendisse euismod congue venenatis. Quisque nisl arcu, ultrices vel fermentum mollis, luctus vitae nibh.</p>
+
+    <div class="microlight">
+    > _actions.addTodos('watch Hook again')
+    </div>
+
+  </div>
+</body>
+</html>

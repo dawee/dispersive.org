@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create an app with Dispersive and React</title>
+  <link rel="stylesheet" type="text/css" href="./styles.css">
+  <script type="text/javascript" src="./bower_components/microlight/microlight.js"></script>
+</head>
+<body>
+  <div id="content">
+
+    <p class="previous">
+        Previous : <a href="./todo-app-1.html">1. Create a new React application</a>
+    </p>
+
+    <h2>2. Create and manipulate the store</h2>
+
+    <div class="microlight">
+    $ npm install --save dispersive dispersive-react
+    </div>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>Suspendisse euismod congue venenatis. Quisque nisl arcu, ultrices vel fermentum mollis, luctus vitae nibh.</p>
+
+    <div class="microlight">
+    const {store} = require('dispersive');
+
+    const schema = {
+      text: '',
+      checked: false,
+    };
+
+    store.register('todos', {schema});
+    store.todos.create({text: 'wash dishes'})
+    store.todos.create({text: 'write a novel'})
+    store.todos.create({text: 'call lionel back'})
+
+    module.exports = store;
+    </div>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>Suspendisse euismod congue venenatis. Quisque nisl arcu, ultrices vel fermentum mollis, luctus vitae nibh.</p>
+
+    <div class="microlight">
+    $ node
+    > const store = require('./store')
+    > store.todos.all()
+    [&lt;all 3 Todo objects&gt;]
+    </div>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>Suspendisse euismod congue venenatis. Quisque nisl arcu, ultrices vel fermentum mollis, luctus vitae nibh.</p>
+
+    <div class="microlight">
+    > store.todos.first().update({checked: true})
+    > store.todos.filter({checked: false}).all()
+    [&lt;only the 2 others Todo objects&gt;]
+    </div>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>Suspendisse euismod congue venenatis. Quisque nisl arcu, ultrices vel fermentum mollis, luctus vitae nibh.</p>
+
+    <p class="next">
+        Next : <a href="./todo-app-3.html">3. Show the store elements with the component</a>
+    </p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "dispersive.org",
+  "authors": [
+    "David Corticchiato <david.corticchiato@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "microlight": "^0.0.7"
+  }
+}

@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans+Mono|Open+Sans');
+
+body {
+  background-color: #323249;
+  color: #CACAEB;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+}
+
+p {
+  text-align: justify;
+}
+
+.previous, .next {
+  font-size: 18px;
+}
+
+.next {
+  float: right; 
+}
+
+.previous {
+  width: 100%;
+  border-bottom: 1px solid #CACAEB;
+  padding-bottom: 2em;
+}
+
+a, a:visited {
+  color: #CACAEB;
+  font-weight: bold;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+a:hover {
+  opacity: 1;  
+}
+  
+#content {
+  width: 50em;
+  margin: 0 auto 0 auto;
+} 
+
+#content > div {
+  width: 100%;
+}
+
+.microlight {
+  font-family: 'Droid Sans Mono', monospace;
+  white-space: pre;
+  background-color: #CECDED;
+  color: #0D0D3D;   
+  margin: 2em 0 2em 0;
+}

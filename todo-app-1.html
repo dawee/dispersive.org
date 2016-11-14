@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create an app with Dispersive and React</title>
+  <link rel="stylesheet" type="text/css" href="./styles.css">
+  <script type="text/javascript" src="./bower_components/microlight/microlight.js"></script>
+</head>
+<body>
+  <div id="content">
+    <h2>1. Create a new React application</h2>
+    
+    <div class="microlight">
+    $ npm install -g create-react-app
+    </div>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>Suspendisse euismod congue venenatis. Quisque nisl arcu, ultrices vel fermentum mollis, luctus vitae nibh.</p>
+
+    <div class="microlight">
+    $ create-react-app todos
+    $ cd todos/
+    $ npm start
+    </div>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>Suspendisse euismod congue venenatis. Quisque nisl arcu, ultrices vel fermentum mollis, luctus vitae nibh.</p>
+
+    <div class="microlight">
+    const React = require('react');
+
+    class App extends React.Component {
+      render() {
+        return (
+          &lt;div&gt;
+            &lt;ul&gt;
+              &lt;li&gt;wash dishes&lt;/li&gt;
+              &lt;li&gt;write a novel&lt;/li&gt;
+              &lt;li&gt;call lionel back&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/div&gt;
+        );
+      }
+    }
+
+    module.exports = App;
+    </div>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>Suspendisse euismod congue venenatis. Quisque nisl arcu, ultrices vel fermentum mollis, luctus vitae nibh.</p>
+
+    <p class="next">
+        Next : <a href="./todo-app-2.html">2. Create and manipulate the store</a>
+    </p>
+  </div>
+</body>
+</html>

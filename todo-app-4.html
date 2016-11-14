@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create an app with Dispersive and React</title>
+  <link rel="stylesheet" type="text/css" href="./styles.css">
+  <script type="text/javascript" src="./bower_components/microlight/microlight.js"></script>
+</head>
+<body>
+  <div id="content">
+
+    <p class="previous">
+        Previous : <a href="./todo-app-3.html">3. Show the store elements with the component</a>
+    </p>
+
+    <h2>4. Create an action to manipulate the store</h2>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>Suspendisse euismod congue venenatis. Quisque nisl arcu, ultrices vel fermentum mollis, luctus vitae nibh.</p>
+
+    <div class="microlight">
+    const {actions} = require('dispersive');
+
+    const addTodo = text => ({text});
+
+    actions.register({addTodo});
+
+    module.exports = actions;
+    </div>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>Suspendisse euismod congue venenatis. Quisque nisl arcu, ultrices vel fermentum mollis, luctus vitae nibh.</p>
+
+    <div class="microlight">
+    const actions = require('./actions');
+    const {store} = require('dispersive');
+    </div>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>Suspendisse euismod congue venenatis. Quisque nisl arcu, ultrices vel fermentum mollis, luctus vitae nibh.</p>
+
+    <div class="microlight">
+    actions.addTodo.subscribe(todo => store.todos.create(todo));
+
+    module.exports = store;
+    </div>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>Suspendisse euismod congue venenatis. Quisque nisl arcu, ultrices vel fermentum mollis, luctus vitae nibh.</p>
+
+    <div class="microlight">
+    > _actions.addTodos('watch Hook again')
+    </div>
+
+  </div>
+</body>
+</html>
